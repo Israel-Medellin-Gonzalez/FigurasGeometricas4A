@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.triangulo4a.Contratos.ContratoCuadrado
 import com.example.triangulo4a.Presentador.CuadradoPresenter
 import com.example.triangulo4a.R
+import kotlin.toString
 
 class MainActivityCuadrado : AppCompatActivity(), ContratoCuadrado.Vista {
 
@@ -27,7 +28,7 @@ class MainActivityCuadrado : AppCompatActivity(), ContratoCuadrado.Vista {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_cuadrado)
 
-        val txtLado: EditText = findViewById<EditText>(R.id.edtLado);
+        val txtLado: EditText = findViewById<EditText>(R.id.edtlado);
         val btnArea: Button = findViewById<Button>(R.id.btnArea);
         val btnPerimetro: Button = findViewById<Button>(R.id.btnPerimetro);
         txvResultado = findViewById<TextView>(R.id.txvRes);

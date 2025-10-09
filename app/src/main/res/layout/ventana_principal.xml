@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="25dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Por favor elija el tipo de figura que desea calcular:"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:layout_marginTop="50dp"/>
+        <Spinner
+            android:id="@+id/spnSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/btnIr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ir"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

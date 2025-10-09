@@ -11,9 +11,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.triangulo4a.Contratos.ContratoRectangulo
 import com.example.triangulo4a.Presentador.RectanguloPresenter
 import com.example.triangulo4a.R
-import kotlin.math.sqrt
+import kotlin.toString
 
-class MainActivityRectangulo : AppCompatActivity() {
+class MainActivityRectangulo : AppCompatActivity(), ContratoRectangulo.Vista {
     private lateinit var txvResultado: TextView;
     private lateinit var presentador: ContratoRectangulo.Presentador;
 
@@ -24,16 +24,15 @@ class MainActivityRectangulo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState);
         enableEdgeToEdge();
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_rectangulo);
 
-        val txtBase: EditText =findViewById<EditText>(R.id.edtBase);
-        val txtAltura: EditText =findViewById<EditText>(R.id.edtAltura);
+        val txtBase: EditText =findViewById<EditText>(R.id.edtbase);
+        val txtAltura: EditText =findViewById<EditText>(R.id.edtaltura);
         val btnArea: Button =findViewById<Button>(R.id.btnArea);
         val btnPerimetro: Button =findViewById<Button>(R.id.btnPerimetro);
-        val btnDiagonal: Button =findViewById<Button>(R.id.btnDiagonal);
         txvResultado=findViewById<TextView>(R.id.txvRes);
 
-        presentador= RectanguloPresenter(this);
+        presentador = RectanguloPresenter(this);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -52,12 +51,6 @@ class MainActivityRectangulo : AppCompatActivity() {
             val altura=txtAltura.text.toString().toFloat();
             presentador.perimetro(base,altura);
         }
-
-        btnDiagonal.setOnClickListener{
-            val base=txtBase.text.toString().toFloat();
-            val altura=txtAltura.text.toString().toFloat();
-            presentador.diagonal(base,altura);
-        }
     }
 
     override fun showArea(area: Float) {
@@ -66,11 +59,7 @@ class MainActivityRectangulo : AppCompatActivity() {
     override fun showPerimetro(perimetro: Float) {
         txvResultado.text="El perimetro es ${perimetro}";
     }
-    override fun showDiagonal(diagonal: Float) {
-        txvResultado.text="La diagonal es ${diagonal}";
-    }
     override fun showError(msg: String) {
-        txvResultado.text=msg;
+        txvResultado.text = msg
     }
-
 }

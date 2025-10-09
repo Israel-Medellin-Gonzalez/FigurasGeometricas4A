@@ -22,13 +22,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="Calculadora de triangulos 4A"
+            android:text="Calculadora de triangulo 4A"
             app:layout_constraintTop_toTopOf="parent"
             android:textSize="30dp"
             android:textAlignment="center"
             android:textStyle="italic"/>
-
-
 
         <EditText
             android:id="@+id/edtL1"
@@ -71,12 +69,13 @@
                 android:layout_height="wrap_content"
                 android:text="Perimetro"
                 android:layout_margin="13dp"/>
+
             <Button
                 android:id="@+id/btnTipo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tipo"
-                android:layout_margin="13dp"/>
+                android:layout_margin="13dp"
+                android:text="Tipo" />
         </LinearLayout>
 
         <TextView
@@ -95,11 +94,5 @@
             android:layout_marginTop="50dp"
             android:text="Gracias por su atencion"
             android:textAlignment="center" />
-
-
     </LinearLayout>
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

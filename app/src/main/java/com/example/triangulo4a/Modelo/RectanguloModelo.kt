@@ -4,17 +4,13 @@ import com.example.triangulo4a.Contratos.ContratoRectangulo;
 import kotlin.math.sqrt;
 
 class RectanguloModelo : ContratoRectangulo.Modelo {
-    fun area(base: Float, altura: Float): Float {
+    override fun area(base: Float, altura: Float): Float {
         return base * altura;
     }
-    fun perimetro(base: Float, altura: Float): Float {
+    override fun perimetro(base: Float, altura: Float): Float {
         return 2 * (base + altura);
     }
-    fun diagonal(base: Float, altura: Float): Float {
-        val s=(base * base + altura * altura);
-        return sqrt(s);
-    }
-    fun valida(base: Float, altura: Float): Boolean {
+    override fun valida(base: Float, altura: Float): Boolean {
         if (base > 0 && altura > 0) {
             return true;
         } else {

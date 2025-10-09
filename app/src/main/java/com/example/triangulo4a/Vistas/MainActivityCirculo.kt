@@ -29,7 +29,7 @@ class MainActivityCirculo : AppCompatActivity(), ContratoCirculo.Vista {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_circulo)
 
-        val txtRadio: EditText = findViewById<EditText>(R.id.edtRadio);
+        val txtRadio: EditText = findViewById<EditText>(R.id.edtradio);
         val btnArea: Button = findViewById<Button>(R.id.btnArea);
         val btnPerimetro: Button = findViewById<Button>(R.id.btnPerimetro);
         txvResultado = findViewById<TextView>(R.id.txvRes);

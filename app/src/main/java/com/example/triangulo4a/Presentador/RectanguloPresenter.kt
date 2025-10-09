@@ -22,13 +22,4 @@ class RectanguloPresenter(private val vista: ContratoRectangulo.Vista): Contrato
             vista.showError("Datos incorrectos");
         }
     }
-    override fun diagonal(base: Float, altura: Float) {
-        if (modelo.valida(base, altura) == true) {
-            val d = modelo.diagonal(base, altura);
-            vista.showDiagonal(d);
-        } else {
-            vista.showError("Datos incorrectos");
-        }
-
-    }
 }
